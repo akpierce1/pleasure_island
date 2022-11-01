@@ -1,0 +1,480 @@
+ body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, #84b3ba , #83b2b9 , #94babf , #a2bfc3);
+}
+
+/* Navigation Menu */
+header {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.menu-toggle {
+    display: inline-block;
+    padding: 3%;
+    line-height: 1em;
+    font-size: 2em;
+    color: whitesmoke;
+}
+  
+.main-menu {
+    display: none;
+    top: 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: visible;
+    transition: left 0.3s ease; 
+    z-index: 999;
+}
+  
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 2.5em 0 0;
+    width: 180px;
+    background-color: #ab784f;
+}
+  
+.main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+}
+  
+.main-menu li:first-child a {
+    border-top: 1px solid whitesmoke;
+}
+  
+.main-menu a:hover,
+.main-menu a:focus {
+    text-decoration: underline;
+  }
+  
+.main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.main-menu:target, .main-menu[aria-expanded="true"] {
+    display: block;
+    left: 0;
+    outline: none;
+}
+  
+.main-menu:target .menu-close, .main-menu[aria-expanded="true"] .menu-close {
+    z-index: 1001;
+}
+  
+.main-menu:target ul, .main-menu[aria-expanded="true"] ul {
+    position: relative;
+    z-index: 1000;
+}
+  
+.main-menu:target + .backdrop, .main-menu[aria-expanded="true"] + .backdrop{
+    position: absolute;
+    display: block;  
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0,0,0,.85);
+    cursor: default;
+}
+
+ul .nav a {
+    color: whitesmoke;
+}
+
+nav {
+    padding-left: 5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.header {
+    font-size: 2.5em;
+    font-family: 'Kaushan Script', cursive, sans-serif;
+    color: whitesmoke;
+}
+
+.header a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+}
+
+/* welcome Section */
+.welcome-section, .play-section {
+    color: whitesmoke;
+    padding: 3% 5% 5%;
+    margin: 0 auto;
+}
+
+.dining-section {
+    color: whitesmoke;
+    padding: 0 5% 5%;
+    margin: 0 auto;
+}
+
+.welcome-p, .dining-p, .play-p {
+    margin-left: 18%;
+    margin-right: 18%;
+    font-size: 1.2em;
+}
+
+/* Images Section */
+.grid-background, .stay-background {
+    background-color: #e8e4e5;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.dining-header {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 1.8em;
+}
+
+.play-header {
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 1.8em;
+}
+
+.container {
+    background-color: #e8e4e5;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-gap: 2%;
+}
+
+.image-section {
+    text-align: center;
+}
+
+h3 {
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.image, .dining-image, .play-image {
+    width: 90%;
+}
+
+.dining-image, .play-image {
+    opacity:1;
+    transition: 1s ease;
+}
+
+.dining-image:hover, .play-image:hover { 
+    opacity:0.5;
+    transition: .5s ease;
+}
+
+.description {
+    text-align: left;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.accommodations {
+    text-align: center;
+}
+
+.stay-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 2%;
+    margin: auto 10%;
+}
+
+.stay-section {
+    width: 40%;
+    background-color: #cecece;
+    padding: 1% 8% 10% 8%;
+    width: 80%;
+    height: 75%;
+    margin: 1% auto;
+    font-size: 1em;
+}
+
+.hotel {
+    font-size: 1.3em;
+    text-align: center;
+    color: #1f7482;
+}
+
+.hotel-link {
+    color: #1f7482;
+}
+
+.hotel-link:hover {
+    color: #64969e;
+}
+
+/* Footer Section */
+footer {
+    background-color: #e8e4e5;
+    color: #a5744c;
+    padding: 5% 2% 3%;
+}
+
+hr {
+    height: 2px;
+    background-color: #a5744c;
+    border: none;
+    width: 100%;
+}
+
+.copyright {
+    padding-top: 2%;
+    font-weight: bold;
+}
+
+footer a {
+    color: #a5744c;
+}
+
+.social {
+    width: 2.3%;
+    padding: 1% 1.5% 0 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1100px) {
+    .nav-list {
+        padding-left: 3%;
+    } 
+    .social {
+        width: 3%;
+    }
+    .stay-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        margin: 3%;
+    }
+}
+
+@media only screen and (max-width: 1072px) {
+    .nav-list {
+        font-size: 1em;
+        margin-left: -5%;
+}
+    #header {
+    font-size: 2em;
+}
+    .aligncenter {
+    top: 35%;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .aligncenter {
+        top: 30%;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .header {
+        font-size: 1.8em;
+    }
+    .play-p {
+        font-size: 1em;
+    }
+    .dining-header {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 750px) { 
+    .aligncenter {
+        top: 25%;
+    }
+    .welcome {
+        font-size: 1.5em;
+    }
+    .welcome-p {
+        font-size: 1em;
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    footer p {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .social {
+        width: 4%;
+    }
+    .hero {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    .stay-grid {
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 1%;
+        padding-bottom: 20%;
+    }
+    .stay-section {
+        width: 60%;
+    }
+    .welcome-p, .dining-p, .play-p {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .dining-header {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .aligncenter {
+        top: 20%;
+    }
+    h2 {
+        padding-bottom: .1%;
+    }
+    .container {
+        grid-template-columns: none;
+        grid-gap: .1%;
+    }
+    .image, .dining-image, .play-image {
+        width: 90%;
+    }
+    footer p {
+        font-size: .75em;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .description {
+        font-size: .9em;
+    }
+    .header {
+        font-size: 1.8em;
+    }
+    .stay-section {
+        width: 75%;
+    }
+    .dining-header {
+        font-size: 1.6em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 490px) { 
+    .aligncenter {
+        top: 15%;
+    }
+    .welcome-p {
+        font-size: .9em;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    .dining-header {
+        font-size: 1.3em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    footer p {
+        padding-right: 3%;
+        align-items: center;
+    }
+    .social {
+        width: 5.5%;
+    }
+}
+
+@media only screen and (max-width: 375px) { 
+    .aligncenter {
+        top: 10%;
+    }
+    .social {
+        width: 5.2%;
+    }
+    .stay-section {
+        font-size: .75em;
+    }
+    .play-p {
+        font-size: .85em;
+    }
+    .social {
+        width: 7.5%;
+        padding-right: 5%;
+    }
+}
+
+
+@supports (position: fixed) {
+    .main-menu, .main-menu:target + .backdrop, .main-menu[aria-expanded="true"] + .backdrop {
+        position: fixed;
+    }
+}
+  
+@media (min-width: 750px) {
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+}
+    .main-menu {
+        position: relative;
+        left: auto;
+        top: auto;
+        height: auto;
+        display: block;
+}
+    .main-menu ul {
+        display: flex;
+        padding: 0;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        background: none;
+        font-size: 1.2em;
+}
+    .main-menu a {
+        border: 0 !important;
+}
+    .main-menu a:hover, .main-menu a:focus {
+        text-decoration: underline;
+    }
+}
